@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Lang strings for the My overview block.
+ * Lang strings for the saylor overview block.
  *
- * @package    block_myoverview
+ * @package    block_sayloroverview
  * @copyright  Mark Nelson <markn@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -27,8 +27,8 @@ $string['defaulttab_desc'] = 'The tab that will be displayed when a user first v
 $string['future'] = 'Future';
 $string['inprogress'] = 'In progress';
 $string['morecourses'] = 'More courses';
-$string['myoverview:addinstance'] = 'Add a new course overview block';
-$string['myoverview:myaddinstance'] = 'Add a new course overview block to Dashboard';
+$string['sayloroverview:addinstance'] = 'Add a new course overview block';
+$string['sayloroverview:myaddinstance'] = 'Add a new course overview block to Dashboard';
 $string['nocourses'] = 'No courses';
 $string['nocoursesinprogress'] = 'No in progress courses';
 $string['nocoursesfuture'] = 'No future courses';

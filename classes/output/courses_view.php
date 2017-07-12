@@ -17,11 +17,11 @@
 /**
  * Class containing data for courses view in the myoverview block.
  *
- * @package    block_myoverview
+ * @package    block_sayloroverview
  * @copyright  2017 Ryan Wyllie <ryan@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-namespace block_myoverview\output;
+namespace block_sayloroverview\output;
 defined('MOODLE_INTERNAL') || die();
 
 use renderable;

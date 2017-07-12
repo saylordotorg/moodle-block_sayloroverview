@@ -1,4 +1,4 @@
-@block @block_myoverview @javascript
+@block @block_sayloroverview @javascript
 Feature: Course overview block show users their progress on courses
   In order to enable the my overview block in a course
   As a student

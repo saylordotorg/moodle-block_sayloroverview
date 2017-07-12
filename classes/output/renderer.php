@@ -15,22 +15,22 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * myoverview block rendrer
+ * sayloroverview block rendrer
  *
- * @package    block_myoverview
+ * @package    block_sayloroverview
  * @copyright  2016 Ryan Wyllie <ryan@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-namespace block_myoverview\output;
+namespace block_sayloroverview\output;
 defined('MOODLE_INTERNAL') || die;
 
 use plugin_renderer_base;
 use renderable;
 
 /**
- * myoverview block renderer
+ * sayloroverview block renderer
  *
- * @package    block_myoverview
+ * @package    block_sayloroverview
  * @copyright  2016 Ryan Wyllie <ryan@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -43,6 +43,6 @@ class renderer extends plugin_renderer_base {
      * @return string HTML string
      */
     public function render_main(main $main) {
-        return $this->render_from_template('block_myoverview/main', $main->export_for_template($this));
+        return $this->render_from_template('block_sayloroverview/main', $main->export_for_template($this));
     }
 }

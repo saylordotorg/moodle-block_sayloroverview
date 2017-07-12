@@ -15,13 +15,13 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Class containing data for my overview block.
+ * Class containing data for saylor overview block.
  *
- * @package    block_myoverview
+ * @package    block_sayloroverview
  * @copyright  2017 Ryan Wyllie <ryan@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-namespace block_myoverview\output;
+namespace block_sayloroverview\output;
 defined('MOODLE_INTERNAL') || die();
 
 use renderable;
@@ -29,7 +29,7 @@ use renderer_base;
 use templatable;
 use core_completion\progress;
 
-require_once($CFG->dirroot . '/blocks/myoverview/lib.php');
+require_once($CFG->dirroot . '/blocks/sayloroverview/lib.php');
 require_once($CFG->libdir . '/completionlib.php');
 
 /**
@@ -85,13 +85,13 @@ class main implements renderable, templatable {
         }
 
         $coursesview = new courses_view($courses, $coursesprogress);
-        $nocoursesurl = $output->image_url('courses', 'block_myoverview')->out();
-        $noeventsurl = $output->image_url('activities', 'block_myoverview')->out();
+        $nocoursesurl = $output->image_url('courses', 'block_sayloroverview')->out();
+        $noeventsurl = $output->image_url('activities', 'block_sayloroverview')->out();
 
         // Now, set the tab we are going to be viewing.
         $viewingtimeline = false;
         $viewingcourses = false;
-        if ($this->tab == BLOCK_MYOVERVIEW_TIMELINE_VIEW) {
+        if ($this->tab == BLOCK_SAYLOROVERVIEW_TIMELINE_VIEW) {
             $viewingtimeline = true;
         } else {
             $viewingcourses = true;

@@ -17,23 +17,23 @@
 /**
  * Settings for the overview block.
  *
- * @package    block_myoverview
+ * @package    block_sayloroverview
  * @copyright  2017 Mark Nelson <markn@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die;
 
-require_once($CFG->dirroot . '/blocks/myoverview/lib.php');
+require_once($CFG->dirroot . '/blocks/sayloroverview/lib.php');
 
 if ($ADMIN->fulltree) {
 
     $options = [
-        BLOCK_MYOVERVIEW_TIMELINE_VIEW => get_string('timeline', 'block_myoverview'),
-        BLOCK_MYOVERVIEW_COURSES_VIEW => get_string('courses')
+        BLOCK_SAYLOROVERVIEW_TIMELINE_VIEW => get_string('timeline', 'block_sayloroverview'),
+        BLOCK_SAYLOROVERVIEW_COURSES_VIEW => get_string('courses')
     ];
 
-    $settings->add(new admin_setting_configselect('block_myoverview/defaulttab',
-        get_string('defaulttab', 'block_myoverview'),
-        get_string('defaulttab_desc', 'block_myoverview'), 'timeline', $options));
+    $settings->add(new admin_setting_configselect('block_sayloroverview/defaulttab',
+        get_string('defaulttab', 'block_sayloroverview'),
+        get_string('defaulttab_desc', 'block_sayloroverview'), 'timeline', $options));
 }

@@ -1,4 +1,4 @@
-@block @block_myoverview @javascript
+@block @block_sayloroverview @javascript
 Feature: The my overview block allows users to easily access their courses and see upcoming activities
   In order to enable the my overview block in a course
   As a student

@@ -17,13 +17,13 @@
 /**
  * Version details for the My overview block.
  *
- * @package    block_myoverview
+ * @package    block_sayloroverview
  * @copyright  Mark Nelson <markn@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2017051502;         // The current plugin version (Date: YYYYMMDDXX).
+$plugin->version   = 2017051508;         // The current plugin version (Date: YYYYMMDDXX).
 $plugin->requires  = 2017050500;         // Requires this Moodle version.
-$plugin->component = 'block_myoverview'; // Full name of the plugin (used for diagnostics).
+$plugin->component = 'block_sayloroverview'; // Full name of the plugin (used for diagnostics).

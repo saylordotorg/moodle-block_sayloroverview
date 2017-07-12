@@ -17,7 +17,7 @@
 /**
  * Contains the class for the My overview block.
  *
- * @package    block_myoverview
+ * @package    block_sayloroverview
  * @copyright  Mark Nelson <markn@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -27,17 +27,17 @@ defined('MOODLE_INTERNAL') || die();
 /**
  * My overview block class.
  *
- * @package    block_myoverview
+ * @package    block_sayloroverview
  * @copyright  Mark Nelson <markn@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class block_myoverview extends block_base {
+class block_sayloroverview extends block_base {
 
     /**
      * Init.
      */
     public function init() {
-        $this->title = get_string('pluginname', 'block_myoverview');
+        $this->title = get_string('pluginname', 'block_sayloroverview');
     }
 
     /**
@@ -53,14 +53,14 @@ class block_myoverview extends block_base {
         // Check if the tab to select wasn't passed in the URL, if so see if the user has any preference.
         if (!$tab = optional_param('myoverviewtab', null, PARAM_ALPHA)) {
             // Check if the user has no preference, if so get the site setting.
-            if (!$tab = get_user_preferences('block_myoverview_last_tab')) {
-                $config = get_config('block_myoverview');
+            if (!$tab = get_user_preferences('block_sayloroverview_last_tab')) {
+                $config = get_config('block_sayloroverview');
                 $tab = $config->defaulttab;
             }
         }
 
-        $renderable = new \block_myoverview\output\main($tab);
-        $renderer = $this->page->get_renderer('block_myoverview');
+        $renderable = new \block_sayloroverview\output\main($tab);
+        $renderer = $this->page->get_renderer('block_sayloroverview');
 
         $this->content = new stdClass();
         $this->content->text = $renderer->render($renderable);
