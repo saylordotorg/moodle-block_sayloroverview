@@ -15,9 +15,9 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template block_sayloroverview/main
+    @template block_myoverview/main
 
-    This template renders the main content area for the sayloroverview block.
+    This template renders the main content area for the myoverview block.
 
     Example context (json):
     {}
@@ -38,17 +38,17 @@
     </ul>
     <div class="tab-content content-centred">
         <div role="tabpanel" class="tab-pane fade {{#viewingtimeline}}in active{{/viewingtimeline}}" id="myoverview_timeline_view">
-            {{> block_sayloroverview/timeline-view }}
+            {{> block_myoverview/timeline-view }}
         </div>
         <div role="tabpanel" class="tab-pane fade {{#viewingcourses}}in active{{/viewingcourses}}" id="myoverview_courses_view">
             {{#coursesview}}
-                {{> block_sayloroverview/courses-view }}
+                {{> block_myoverview/courses-view }}
             {{/coursesview}}
         </div>
     </div>
 </div>
 {{#js}}
-require(['jquery', 'block_sayloroverview/tab_preferences'], function($, TabPreferences) {
+require(['jquery', 'block_myoverview/tab_preferences'], function($, TabPreferences) {
     var root = $('#block-myoverview-view-choices-{{uniqid}}');
     TabPreferences.registerEventListeners(root);
 });
