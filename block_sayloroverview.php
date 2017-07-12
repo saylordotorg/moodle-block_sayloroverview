@@ -86,4 +86,9 @@ class block_sayloroverview extends block_base {
     public function has_config() {
         return true;
     }
+
+    public function html_attributes() {
+        $attributes['class'] = 'block_myoverview block'; // Append our class to class attribute
+        return $attributes;
+    }
 }
