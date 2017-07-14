@@ -32,6 +32,11 @@
             <div class="hidden-sm-up hidden-phone">
                 {{> block_myoverview/progress-chart}}
                 <h4 class="h5"><a href="{{viewurl}}">{{{fullnamedisplay}}}</a></h4>
+                    {{#certificate}}
+                    <div>
+                        <b><a href="{{certificate}}">{{{viewcertificate}}}</a></b>
+                    </div>
+                    {{/certificate}}
             </div>
             <div class="hidden-xs-down visible-phone">
                 <div class="media">
@@ -43,6 +48,11 @@
                     <div class="media-body">
                         <h4 class="h5"><a href="{{viewurl}}">{{{fullnamedisplay}}}</a></h4>
                     </div>
+                    {{#certificate}}
+                    <div class="media-right">
+                        <b><a href="{{certificate}}">{{{viewcertificate}}}</a></b>
+                    </div>
+                    {{/certificate}}
                 </div>
             </div>
             <p class="text-muted">
