@@ -91,6 +91,9 @@ class courses_view implements renderable, templatable {
                 $courseprogress = $this->coursesprogress[$courseid]['progress'];
                 $exportedcourse->hasprogress = !is_null($courseprogress);
                 $exportedcourse->progress = $courseprogress;
+                if (isset($this->coursesprogress[$courseid]['certificate'])) {
+                    $exportedcourse->certificate = $this->coursesprogress[$courseid]['certificate'];
+                }
             }
 
             if ($classified == COURSE_TIMELINE_PAST) {
