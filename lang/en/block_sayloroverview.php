@@ -42,5 +42,6 @@ $string['recentlyoverdue'] = 'Recently overdue';
 $string['sortbycourses'] = 'Sort by courses';
 $string['sortbydates'] = 'Sort by dates';
 $string['timeline'] = 'Timeline';
+$string['viewcertificate'] = 'View my certificate';
 $string['viewcourse'] = 'View course';
 $string['viewcoursename'] = 'View course {$a}';

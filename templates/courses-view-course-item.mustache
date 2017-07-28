@@ -26,28 +26,48 @@
         "summary": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
     }
 }}
-<div class="col-lg-6">
-    <div class="card m-b-1 courses-view-course-item">
-        <div class="card-block course-info-container" id="course-info-container-{{id}}">
-            <div class="hidden-sm-up hidden-phone">
-                {{> block_myoverview/progress-chart}}
-                <h4 class="h5"><a href="{{viewurl}}">{{{fullnamedisplay}}}</a></h4>
-            </div>
-            <div class="hidden-xs-down visible-phone">
-                <div class="media">
-                    <div class="media-left">
-                        <div class="media-object">
-                            {{> block_myoverview/progress-chart}}
-                        </div>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="h5"><a href="{{viewurl}}">{{{fullnamedisplay}}}</a></h4>
+
+<div class="well well-small">
+    <div class="course-info-container" id="course-info-container-{{id}}">
+        <div class="hidden-sm-up hidden-phone">
+            <div class="media">
+                <div class="pull-left">
+                    <div class="media-object">
+                        {{> block_myoverview/progress-chart}}
                     </div>
                 </div>
+                <div class-"media-body">
+                    <h4 class="media-heading"><a href="{{viewurl}}">{{{fullnamedisplay}}}</a></h4>
+                    {{#certificate}}
+                    <div class="pull-right">
+                        <br><b><h5><a href="{{certificate}}">{{{viewcertificate}}}</a></h5></b>
+                    </div>
+                    {{/certificate}}
+                </div>
             </div>
-            <p class="text-muted">
-                {{#shortentext}} 140, {{summary}}{{/shortentext}}
-            </p>
         </div>
+        <div class="hidden-xs-down visible-phone">
+            <div class="media">
+                <div class="media-left">
+                    <div class="media-object">
+                        {{> block_myoverview/progress-chart}}
+                    </div>
+                </div>
+                <div class="media-body">
+                    <h4 class="h5"><a href="{{viewurl}}">{{{fullnamedisplay}}}</a></h4>
+                </div>
+            </div>
+        </div>
+        <p class="text-muted">
+            {{#shortentext}} 140, {{summary}}{{/shortentext}}
+        </p>
+            {{#certificate}}
+            <div class="hidden-xs-down visible-phone">
+                <div class="text-center">
+                    <b><a href="{{certificate}}">{{{viewcertificate}}}</a></b>
+                </div>
+            </div>
+            {{/certificate}}
     </div>
 </div>
+
