@@ -65,6 +65,7 @@ class main implements renderable, templatable {
 
         $courses = enrol_get_my_courses('*', 'fullname ASC');
         $coursesprogress = [];
+        $courses = block_sayloroverview_sort_courses_by_last_access($courses);
 
         foreach ($courses as $course) {
 
