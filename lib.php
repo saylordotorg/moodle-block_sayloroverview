@@ -114,3 +114,27 @@ function block_sayloroverview_get_accredible_cert($course) {
 	}
 
 }
+
+/**
+* Returns reordered list of courses by last time accessed
+*/
+function block_sayloroverview_sort_courses_by_last_access($courses){
+	global $DB, $USER;
+
+	foreach ($courses as $id=>$course) {
+
+		$lastaccess = $DB->get_field('user_lastaccess', 'timeaccess', array('userid' => $USER->id, 'courseid' => $course->id));
+
+		$courses[$id]->lastaccess = $lastaccess;
+	}
+	
+	usort($courses, "block_sayloroverview_compare_last_access");
+
+	return $courses;
+}
+
+function block_sayloroverview_compare_last_access($a, $b){
+	return ($a->lastaccess > $b->lastaccess) ? -1 : 1;
+}
+
+
