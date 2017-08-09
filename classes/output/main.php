@@ -65,6 +65,7 @@ class main implements renderable, templatable {
 
         $courses = enrol_get_my_courses('*', 'fullname ASC');
         $coursesprogress = [];
+        $courses = block_sayloroverview_sort_courses_by_last_access($courses);
 
         foreach ($courses as $course) {
 
@@ -82,6 +83,15 @@ class main implements renderable, templatable {
 
             $coursesprogress[$course->id]['completed'] = $completion->is_course_complete($USER->id);
             $coursesprogress[$course->id]['progress'] = $percentage;
+
+            // If the course is completed, check for an Accredible certificate and add the link
+            if ($coursesprogress[$course->id]['completed'] == true) {
+                $certificate = block_sayloroverview_get_accredible_cert($course);
+
+                if (isset($certificate)) {
+                    $coursesprogress[$course->id]['certificate'] = $certificate->url;
+                }
+            }
         }
 
         $coursesview = new courses_view($courses, $coursesprogress);
@@ -97,6 +107,8 @@ class main implements renderable, templatable {
             $viewingcourses = true;
         }
 
+        $viewcertificate = get_string('viewcertificate', 'block_sayloroverview');
+
         return [
             'midnight' => usergetmidnight(time()),
             'coursesview' => $coursesview->export_for_template($output),
@@ -104,6 +116,7 @@ class main implements renderable, templatable {
                 'nocourses' => $nocoursesurl,
                 'noevents' => $noeventsurl
             ],
+            'viewcertificate' => $viewcertificate,
             'viewingtimeline' => $viewingtimeline,
             'viewingcourses' => $viewingcourses
         ];
