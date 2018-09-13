@@ -24,6 +24,6 @@
 }
 
 .block_sayloroverview a, a:visited {
-    color: inherit !important;
+    color: inherit;
     text-decoration: none !important;
 }
