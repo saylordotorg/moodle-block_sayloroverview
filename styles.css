@@ -9,5 +9,12 @@
 }
 
 .progress-chart-container.sayloroverview-progress-chart-container .progress-doughnut .progress-text.has-percent {
-    color: #F7B12F;
+    color: #f16505;
+    font-weight: bold;
+}
+
+.progress-chart-container.sayloroverview-progress-chart-container .progress-doughnut .progress-indicator svg .circle {
+	stroke-width: 15px;
+	stroke: #f77504;
+	fill: none;
 }
