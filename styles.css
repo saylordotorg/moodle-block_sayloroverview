@@ -42,3 +42,7 @@
     color: white !important;
     border-radius: .25rem;
 }
+
+.block_sayloroverview .media-body h3 {
+    padding-bottom: .25rem;
+}
