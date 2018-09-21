@@ -25,13 +25,13 @@
 <div id="courses-view-{{uniqid}}" data-region="courses-view">
     {{#hascourses}}
     <div class="d-flex justify-content-center">
-        <ul class="nav nav-pills mt-1 mb-3">
-            <li class="nav-item">
+        <ul class="nav nav-pills mt-1 mb-3 d-flex-row justify-content-center">
+            <li class="nav-item flex-item">
                 <a class="nav-link sayloroverview-pill active" href="#myoverview_courses_view_in_progress" data-toggle="tab">
                     {{#str}} inprogress, block_sayloroverview {{/str}}
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item flex-item">
                 <a class="nav-link sayloroverview-pill" href="#myoverview_courses_view_past" data-toggle="tab">
                     {{#str}} past, block_sayloroverview {{/str}}
                 </a>
